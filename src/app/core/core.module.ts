@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {StreamComponent} from "./stream/stream.component";
-import {InputAreaComponent} from "./input-area/input-area.component";
+import {StreamComponent} from "./components/stream/stream.component";
+import {InputAreaComponent} from "./components/input-area/input-area.component";
 
 
 
