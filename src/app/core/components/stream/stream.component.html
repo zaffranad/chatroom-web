@@ -1,5 +1,5 @@
 <p>stream works!</p>
 
-<div *ngFor="let msg of messages" >
+<div *ngFor="let msg of obs | async" >
   {{msg.content}}
 </div>

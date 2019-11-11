@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MessageService } from "../../services/message.service";
 import { Message } from "../../model/message";
 import { map } from "rxjs/operators";
+import { Observable } from "rxjs";
 
 @Component({
   selector: 'app-stream',
@@ -11,19 +12,22 @@ import { map } from "rxjs/operators";
 export class StreamComponent implements OnInit {
 
   messages: Array<Message> = [];
+  obs: Observable<Array<Message>>;
 
   constructor(
     private messageService: MessageService
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
-    this.messageService.getMessages()
+
+    this.obs = this.messageService.getMessages()
       .pipe(
         map(message => {
           console.log(this.messages, message)
-          return this.messages.push(message)
+          this.messages.push(message)
+          return this.messages;
         })
-      ).subscribe();
+      )
   }
-
 }

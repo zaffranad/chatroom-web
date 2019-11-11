@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {StreamComponent} from "./components/stream/stream.component";
 import {InputAreaComponent} from "./components/input-area/input-area.component";
+import { FormsModule } from "@angular/forms";
 
 
 
@@ -15,7 +16,8 @@ import {InputAreaComponent} from "./components/input-area/input-area.component";
     InputAreaComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class CoreModule { }
