@@ -1,9 +1,21 @@
-<p>input-area works!</p>
 <form (ngSubmit)="onSubmit()">
-  <label>
-    <input name="message-input"
-           [(ngModel)]="message"
-           required>
-  </label>
-  <button type="submit">chat!</button>
+  <div id="input-area-test">
+    <div class="author">
+      <label>
+        <input name="message-author"
+               [(ngModel)]="author"
+               required>
+      </label>
+    </div>
+    <div class="input-message">
+      <label>
+        <input name="message-input"
+               [(ngModel)]="message"
+               required>
+      </label>
+    </div>
+    <div>
+      <button type="submit">></button>
+    </div>
+  </div>
 </form>

@@ -37,7 +37,7 @@ export class MessageService {
     )
   }
 
-  postMessage(message: string) {
-    return this.http.post('http://localhost:8080/messages/message', new Message(message, 'adrien', 'null'));
+  postMessage(message: string, author: string) {
+    return this.http.post('http://localhost:8080/messages/message', new Message(message, author, 'null'));
   }
 }

@@ -1,0 +1,29 @@
+#input-area-test {
+  display: flex;
+  flex-direction: row;
+
+  form {
+    width: 100%;
+  }
+
+  div {
+    display: flex;
+  }
+
+  .author input {
+    width: 100px;
+  }
+
+  .input-message {
+    width: 100%;
+
+    * {
+      width: 100%;
+    }
+  }
+
+  button {
+    width: 25px;
+  }
+
+}
