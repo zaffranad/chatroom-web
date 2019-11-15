@@ -16,6 +16,7 @@ export class InputAreaComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.author = sessionStorage.getItem('author');
   }
 
   onSubmit() {

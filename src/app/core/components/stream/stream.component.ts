@@ -24,7 +24,6 @@ export class StreamComponent implements OnInit {
     this.obs = this.messageService.getMessages()
       .pipe(
         map(message => {
-          console.log(this.messages, message)
           this.messages.push(message)
           return this.messages;
         })

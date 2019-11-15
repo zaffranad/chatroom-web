@@ -1,0 +1,16 @@
+<div>
+  <form (ngSubmit)="onSubmit()">
+    <div id="author-input">
+      <div class="author">
+        <label>
+          <input name="message-author"
+                 [(ngModel)]="author"
+                 required>
+        </label>
+      </div>
+      <div>
+        <button type="submit">></button>
+      </div>
+    </div>
+  </form>
+</div>

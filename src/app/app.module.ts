@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChatModule } from "./modules/chat/chat.module";
+import { WelcomeScreenComponent } from "./modules/welcome-screen/welcome-screen.component";
+import { WelcomeScreenModule } from "./modules/welcome-screen/welcome-screen.module";
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { ChatModule } from "./modules/chat/chat.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChatModule
+    ChatModule,
+    WelcomeScreenModule
   ],
   providers: [],
   bootstrap: [AppComponent]

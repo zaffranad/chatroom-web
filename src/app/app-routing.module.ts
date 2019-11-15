@@ -1,12 +1,21 @@
-import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
-import {ChatComponent} from "./modules/chat/chat.component";
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { ChatComponent } from "./modules/chat/chat.component";
+import { WelcomeScreenComponent } from "./modules/welcome-screen/welcome-screen.component";
+import { IsAuthorSuppliedGuard } from "./modules/chat/guard/is-author-supplied.guard";
 
 
 const routes: Routes = [
   {
     path: '',
-    component: ChatComponent
+    component: WelcomeScreenComponent
+  },
+  {
+    path: 'chat',
+    component: ChatComponent,
+    canActivate: [
+      IsAuthorSuppliedGuard
+    ]
   }
 ];
 
