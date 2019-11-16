@@ -1,16 +1,20 @@
-<div>
-  <form (ngSubmit)="onSubmit()">
-    <div id="author-input">
-      <div class="author">
-        <label>
-          <input name="message-author"
-                 [(ngModel)]="author"
-                 required>
-        </label>
+<div class="middle-centered">
+  <div class="as-column-centered">
+    <img class="centered" src="assets/cat.svg">
+    <form (ngSubmit)="onSubmit()">
+      <div id="author-input">
+        <div class="author">
+          <label>
+            <input name="message-author"
+                   placeholder="choose a name..."
+                   [(ngModel)]="author"
+                   required>
+          </label>
+        </div>
+        <div>
+          <button type="submit">></button>
+        </div>
       </div>
-      <div>
-        <button type="submit">></button>
-      </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </div>
