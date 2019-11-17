@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from "../../services/message.service";
+import { LoginService } from "../../services/login.service";
 
 @Component({
   selector: 'app-input-area',
@@ -8,21 +9,22 @@ import { MessageService } from "../../services/message.service";
 })
 export class InputAreaComponent implements OnInit {
   message: string;
-  author: string;
+  login: string;
 
   constructor(
-    private messageService: MessageService
+    private messageService: MessageService,
+    private loginService: LoginService
   ) {
   }
 
   ngOnInit() {
-    this.author = sessionStorage.getItem('author');
+    this.login = this.loginService.login;
   }
 
   onSubmit() {
-    this.messageService.postMessage(this.message, this.author)
+    this.messageService.postMessage(this.message, this.login)
       .subscribe(ok => {
-          console.log('well send...')
+          this.message = null;
         },
         error => {
           alert('error');

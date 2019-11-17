@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from "@angular/router";
-import { AuthorService } from "../../core/services/author.service";
+import { Component } from '@angular/core';
+import { Router } from "@angular/router";
+import { LoginService } from "../../core/services/login.service";
 
 @Component({
   selector: 'app-welcome-screen',
@@ -8,15 +8,15 @@ import { AuthorService } from "../../core/services/author.service";
   styleUrls: ['./welcome-screen.component.scss']
 })
 export class WelcomeScreenComponent {
-  author: string;
+  login: string;
 
   constructor(
     private router: Router,
-    private authorService: AuthorService
+    private loginService: LoginService
   ) { }
 
   onSubmit() {
-    this.authorService.author = this.author;
+    this.loginService.login = this.login;
     this.router.navigate(['chat'])
   }
 }

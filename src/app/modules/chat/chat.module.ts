@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ChatComponent } from './chat.component';
 import { CoreModule } from "../../core/core.module";
 import { HttpClientModule } from "@angular/common/http";
+import { RouterModule } from "@angular/router";
 
 
 @NgModule({
@@ -10,6 +11,7 @@ import { HttpClientModule } from "@angular/common/http";
   imports: [
     CommonModule,
     CoreModule,
+    RouterModule,
     HttpClientModule
   ]
 })

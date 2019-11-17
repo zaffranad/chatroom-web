@@ -10,20 +10,23 @@
     display: flex;
   }
 
-  .author input {
-    width: 100px;
-  }
-
   .input-message {
+    border-bottom: solid 1px black;
     width: 100%;
 
-    * {
+    input {
       width: 100%;
+      border: none;
+    }
+
+    input:focus {
+      border: none;
+      outline: none;
     }
   }
 
-  button {
-    width: 25px;
-  }
+}
 
+.label-input {
+  margin: auto 5px;
 }

@@ -1,23 +1,23 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
-import { AuthorService } from "../../../core/services/author.service";
+import { LoginService } from "../../../core/services/login.service";
 
 @Injectable({
   providedIn: 'root'
 })
-export class IsAuthorSuppliedGuard implements CanActivate {
+export class IsLoginSuppliedGuard implements CanActivate {
 
   constructor(
     private router: Router,
-    private authorService: AuthorService
+    private loginService: LoginService
   ) {
   }
 
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return !!this.authorService.author || this.router.navigate(['']);
+    return this.loginService.isValid() || this.router.navigate(['']);
   }
 
 }

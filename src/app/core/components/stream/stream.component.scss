@@ -1,0 +1,17 @@
+.message-container {
+  padding: 2px auto;
+
+  span {
+    font-size: small;
+    font-family: 'Tomorrow', sans-serif;
+  }
+}
+
+.messages-container {
+  padding: 5px;
+}
+
+.messages-action {
+  display: flex;
+  flex-direction: row-reverse;
+}

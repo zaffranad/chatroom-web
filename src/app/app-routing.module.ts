@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ChatComponent } from "./modules/chat/chat.component";
 import { WelcomeScreenComponent } from "./modules/welcome-screen/welcome-screen.component";
-import { IsAuthorSuppliedGuard } from "./modules/chat/guard/is-author-supplied.guard";
+import { IsLoginSuppliedGuard } from "./modules/chat/guard/is-login-supplied.guard";
 
 
 const routes: Routes = [
@@ -14,7 +14,7 @@ const routes: Routes = [
     path: 'chat',
     component: ChatComponent,
     canActivate: [
-      IsAuthorSuppliedGuard
+      IsLoginSuppliedGuard
     ]
   }
 ];

@@ -1,5 +1,12 @@
-<div>
+<div class="messages-action">
+  <a (click)="onClear()">clear</a>
+</div>
+<div class="messages-container">
   <div *ngFor="let msg of obs | async">
-     {{msg.postedDate}} {{msg.author}} {{msg.content}}
+    <div class="message-container">
+      <span class="message-date">{{msg.postedDate | date :'hh:mm:ss' }} </span>
+      <span class="message-author">| {{msg.author}} </span>
+      <span class="message-content">> {{msg.content}}</span>
+    </div>
   </div>
 </div>

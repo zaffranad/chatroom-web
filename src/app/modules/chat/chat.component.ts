@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthorService } from "../../core/services/author.service";
+import { LoginService } from "../../core/services/login.service";
 
 @Component({
   selector: 'app-chat',
@@ -7,14 +7,18 @@ import { AuthorService } from "../../core/services/author.service";
   styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent implements OnInit {
-  author: string;
+  login: string;
 
   constructor(
-    private authorService: AuthorService
+    private loginService: LoginService
   ) { }
 
   ngOnInit() {
-    this.author = this.authorService.author;
+    this.login = this.loginService.login;
   }
 
+  onClick() {
+    this.loginService.reset();
+    console.log(this.loginService.login)
+  }
 }

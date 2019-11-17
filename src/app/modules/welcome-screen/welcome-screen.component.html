@@ -1,18 +1,20 @@
 <div class="middle-centered">
   <div class="as-column-centered">
     <img class="centered" src="assets/cat.svg">
-    <form (ngSubmit)="onSubmit()">
-      <div id="author-input">
-        <div class="author">
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+      <div id="login-input">
+        <div class="login">
           <label>
-            <input name="message-author"
-                   placeholder="choose a name..."
-                   [(ngModel)]="author"
+            <div class="input-decoration">
+              <input name="message-login"
+                     placeholder="choose a name..."
+                     [(ngModel)]="login"
                    required>
+            </div>
           </label>
         </div>
         <div>
-          <button type="submit">></button>
+          <button type="submit" [disabled]="loginForm.invalid">></button>
         </div>
       </div>
     </form>

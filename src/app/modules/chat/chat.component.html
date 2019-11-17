@@ -1,6 +1,13 @@
 <div id="chat-container">
-  <div>
-    <span>{{author}}</span>
+  <div class="header">
+    <div class="logo">
+      <img src="assets/cat.svg">
+    </div>
+    <div class="right-header">
+      <div class="login">
+        <a [routerLink]="['']" (click)="onClick()">{{login}}</a>
+      </div>
+    </div>
   </div>
   <div id="stream">
     <app-stream>

@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-#author-input {
+#login-input {
   display: flex;
   flex-direction: row;
 }
@@ -26,4 +26,25 @@ img.centered {
   height: auto;
   margin: auto;
   display: block;
+}
+
+input {
+  border: none;
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}
+
+button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.input-decoration {
+  border-bottom: solid 1px black;
+  font-weight: 400;
+  line-height: 1.125;
 }
