@@ -1,7 +1,4 @@
-<div class="messages-action">
-  <a (click)="onClear()">clear</a>
-</div>
-<div class="messages-container">
+<div class="messages-container" #scrollMe>
   <div *ngFor="let msg of obs | async">
     <div class="message-container">
       <span class="message-date">{{msg.postedDate | date :'hh:mm:ss' }} </span>

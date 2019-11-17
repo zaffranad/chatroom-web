@@ -7,11 +7,13 @@
   }
 }
 
-.messages-container {
-  padding: 5px;
+.message-date, .message-author {
+  font-style: italic;
 }
 
-.messages-action {
-  display: flex;
-  flex-direction: row-reverse;
+.messages-container {
+  padding: 5px;
+  max-height: 95%;
+  overflow-y: scroll;
 }
+

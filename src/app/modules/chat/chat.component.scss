@@ -19,15 +19,29 @@
   justify-content: space-between;
 
   .logo {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+
     img {
       height: 100%;
     }
+
+    .title {
+      font-family: 'Lobster', cursive;
+      font-size: larger;
+    }
+
   }
 
   .right-header {
     display: flex;
     align-items: center;
+    padding-right: 1em;
+
+    .login {
+      font-family: 'Tomorrow', sans-serif;
+    }
   }
 }
-
-
