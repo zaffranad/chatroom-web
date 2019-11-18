@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StreamComponent } from './stream.component';
+import { HttpClientModule } from "@angular/common/http";
 
 describe('StreamComponent', () => {
   let component: StreamComponent;
@@ -8,7 +9,8 @@ describe('StreamComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StreamComponent ]
+      declarations: [StreamComponent],
+      imports: [HttpClientModule]
     })
     .compileComponents();
   }));

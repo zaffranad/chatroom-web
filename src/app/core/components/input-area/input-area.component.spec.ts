@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InputAreaComponent } from './input-area.component';
+import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 describe('InputAreaComponent', () => {
   let component: InputAreaComponent;
@@ -8,9 +10,13 @@ describe('InputAreaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InputAreaComponent ]
+      declarations: [InputAreaComponent],
+      imports: [
+        FormsModule,
+        HttpClientModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

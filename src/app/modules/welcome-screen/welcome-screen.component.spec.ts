@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WelcomeScreenComponent } from './welcome-screen.component';
+import { FormsModule } from "@angular/forms";
+import { RouterTestingModule } from "@angular/router/testing";
 
 describe('WelcomeScreenComponent', () => {
   let component: WelcomeScreenComponent;
@@ -8,7 +10,11 @@ describe('WelcomeScreenComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WelcomeScreenComponent ]
+      declarations: [WelcomeScreenComponent],
+      imports: [
+        FormsModule,
+        RouterTestingModule.withRoutes([])
+      ]
     })
     .compileComponents();
   }));
